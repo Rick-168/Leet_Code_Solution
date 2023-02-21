@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<stlib.h>
+
+ typedef struct node
+ {
+     int data;
+     struct node *next;
+ } node;
+ 
+ node* addnumber(node*,node*);
+ node* sum();
+ node* head = NULL;
+ node* head1 = NULL;
+ node* addnumber(node*l1,node*l2)
+ {
+      node *ptr,*l3;
+      l1=malloc(sizeof(node));
+      scanf("%d",l1->data);
+      l1->next=NULL;
+      ptr=head;
+      if(head==NULL)
+       head = l1;
+      else
+      {
+          while(ptr!=NULL)
+          ptr=ptr->next;
+          ptr->next=l1;
+      }
+
+       l2=malloc(sizeof(node));
+      scanf("%d",l2->data);
+      l2->next=NULL;
+      ptr=head1;
+      if(head1==NULL)
+       head1 = l1;
+      else
+      {
+          while(ptr!=NULL)
+          ptr=ptr->next;
+          ptr->next=l2;
+      }
+
+      l3 = sum();
+ }
+
+ node* sum();
+ { 
+      
+
+ }
